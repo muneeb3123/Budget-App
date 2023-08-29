@@ -2,7 +2,7 @@
 
 <% if user_signed_in? %>
   <div class="navbar">
+     <%= button_to raw('<i class="fas fa-sign-out-alt"></i>'), destroy_user_session_path, method: :delete, class: 'logout-button', form_class: 'logout-form' %>
     <p class="app-name">Budget App</p>
-    <%= button_to 'Logout', destroy_user_session_path, method: :delete, class: 'logout-button' %>
-  </div>
+ </div>
   <%end%>
