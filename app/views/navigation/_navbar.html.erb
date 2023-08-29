@@ -2,7 +2,11 @@
 
 <% if user_signed_in? %>
   <div class="navbar">
-     <%= button_to raw('<i class="fas fa-sign-out-alt"></i>'), destroy_user_session_path, method: :delete, class: 'logout-button', form_class: 'logout-form' %>
+    <% if current_page?(groups_path) %>
+      <%= button_to raw('<i class="fas fa-sign-out-alt"></i>'), destroy_user_session_path, method: :delete, class: 'logout-button', form_class: 'logout-form' %>
+    <% else %>
+      <%= link_to raw('<i class="fas fa-arrow-left"></i>'), groups_path, class: 'back-link' %>
+    <% end %>
     <p class="app-name">Budget App</p>
- </div>
-  <%end%>
+  </div>
+<% end %>
