@@ -1,0 +1,44 @@
+/* Home page */
+
+body {
+    background-color:  rgb(137, 47, 255);
+}
+
+.home-page {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.project-name h1 {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.login-setup {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.login-setup >a {
+    width: 200px;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.login {
+    background-color: #FF4081;
+}
+
+.signup {
+    background-color: #FF9800; 
+}
+
