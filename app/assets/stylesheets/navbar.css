@@ -1,0 +1,21 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 2rem;
+    background-color: #3778c2;
+}
+
+.app-name {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.logout-button {
+    background-color: #3778c2;
+    color: #fff;
+    font-size: 1rem;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
