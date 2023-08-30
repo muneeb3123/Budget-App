@@ -1,4 +1,7 @@
 class TradesController < ApplicationController
+  before_action :authenticate_user!
+  load_and_authorize_resource
+  
     def new
       @group = Group.find(params[:group_id])
       @trade = Trade.new
