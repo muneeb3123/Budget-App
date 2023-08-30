@@ -27,7 +27,7 @@
         <span>$ <%= trade.amount%></span>
     </div>
     <div class="delete-category">
-        <%= button_to 'Delete' , user_group_path(@user, @group), method: :delete %>
+        <%= button_to 'Delete' , user_group_trade_path(@user, @group, trade), method: :delete %>
     </div>
   </div>
   <%end%>

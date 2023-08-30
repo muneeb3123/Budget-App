@@ -17,6 +17,14 @@ class TradesController < ApplicationController
           render :new
         end
       end
+
+      def destroy
+        @group = Group.find(params[:group_id])
+        @trade = Trade.find(params[:id])
+        @trade.destroy
+        flash[:notice] = "Successfully deleted"
+        redirect_to user_group_trades_path(current_user, @group)
+      end
       
   
     private
