@@ -22,6 +22,11 @@ RSpec.describe 'Groups', type: :system do
       expect(page).to have_text('Add new')
     end
 
+    it 'displays "create" link to create new category' do
+        visit new_user_group_path(user_id: @user.id)
+        expect(page).to have_text('create')
+      end
+
     it 'displays total amount ' do
       visit user_groups_path(user_id: @user.id)
       expect(page).to have_text('$ 0')

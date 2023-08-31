@@ -21,7 +21,7 @@ RSpec.describe 'Group show', type: :system do
       expect(page).to have_content(@trade.name)
     end
 
-    it 'displays "Add new group" link' do
+    it 'it should show "create" link to create new transaction' do
       visit new_user_group_trade_path(user_id: @user.id, group_id: @group.id)
       expect(page).to have_text('Create')
     end
