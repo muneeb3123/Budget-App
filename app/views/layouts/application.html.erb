@@ -19,7 +19,11 @@
   </head>
 
   <body>
-    <%# <p class="notice"><%= notice %>
+     <% flash.each do |key, message| %>
+      <div class="flash-message <%= key %>">
+        <p><%= message %></p>
+      </div>
+      
     <%= yield %>
   </body>
 </html>

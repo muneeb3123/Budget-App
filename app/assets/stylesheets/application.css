@@ -44,3 +44,38 @@ a {
   color: #fff;
   font-size: 1.5rem;
 }
+
+.flash-message {
+  display: flex;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.success {
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  color: #155724;
+}
+
+.notice {
+  background-color: #05ebdf;
+  border-color: #c3e6cb;
+  color: #155724;
+}
+
+.error {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  color: #721c24;
+}
+
+.close-flash-button {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}

@@ -13,10 +13,10 @@ class TradesController < ApplicationController
     @trade.user_id = current_user.id
 
     if @trade.save
-      flash[:notice] = 'Transaction created successfully.'
+      flash[:success] = 'Transaction created successfully.'
       redirect_to user_group_path(current_user, @group)
     else
-      flash[:alert] = 'Transaction not created. Please check the input fields.'
+      flash[:error] = 'Transaction not created. Please check the input fields.'
       render :new
     end
   end
@@ -25,7 +25,7 @@ class TradesController < ApplicationController
     @group = Group.find(params[:group_id])
     @trade = Trade.find(params[:id])
     @trade.destroy
-    flash[:notice] = 'Successfully deleted'
+    flash[:success] = 'Successfully deleted'
     redirect_to user_group_trades_path(current_user, @group)
   end
 
