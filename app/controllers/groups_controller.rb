@@ -21,7 +21,7 @@ class GroupsController < ApplicationController
   def destroy
     @group = Group.find(params[:id])
     @group.destroy
-    flash[:notice] = 'Successfully deleted'
+    flash[:success] = 'Successfully deleted'
     redirect_to user_groups_path(current_user)
   end
 
@@ -30,9 +30,9 @@ class GroupsController < ApplicationController
     @group = @user.groups.new(group_params)
     if @group.save
       redirect_to user_groups_path(current_user)
-      flash[:notice] = 'Successfully created Category'
+      flash[:success] = 'Successfully created Category'
     else
-      flash[:notice] = 'Unable to create Category'
+      flash[:error] = 'Unable to create Category'
       render :new
     end
   end
