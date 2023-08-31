@@ -1,16 +1,23 @@
-<h2>Forgot your password?</h2>
+<%= stylesheet_link_tag 'form'%>
+
+<div class="heading">
+  <div class="left-link">
+    <%= link_to raw('<i class="fas fa-arrow-left"></i>'), root_path, class: "back-icon" %>
+  </div>
+ <h1 class="center-heading">Forgot password</h1>
+</div>
+<div class="forms">
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Enter your register email" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
+    <%= f.submit "reset" %>
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+</div>

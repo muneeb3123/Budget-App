@@ -1,0 +1,33 @@
+body {
+  background-color: #ced4d2;
+}
+
+.forms {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form input:not([type="submit"]) {
+  width: 100vw;
+  padding: 20px;
+}
+
+form input[type="submit"] {
+  padding: 10px;
+  color: #fff;
+  border: none;
+  width: 100vw;
+  background-color: #3778c2;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+form input::placeholder {
+  padding-left: 20px;
+}
+
+.links {
+  margin-top: 20px;
+}

@@ -1,0 +1,40 @@
+ <%= stylesheet_link_tag 'categories' %>
+ <main>
+<div class="heading">
+  <div class="left-link">
+    <%= link_to raw('<i class="fas fa-arrow-left"></i>'), user_groups_path(@user), class: "back-icon" %>
+  </div>
+  <h1 class="center-heading">Transactions</h1>
+</div>
+
+<div class="category-name-icon">
+    <p><%= @group.name%></p>
+    <%= image_tag @group.icon, class: "image-logo"%>
+</div>
+    <div class="total">
+        <span class="total-amount">$ <%= @amount%></span>
+    </div>
+    <div class="categories">
+      <% @group.trades.order(created_at: :desc).each do |trade| %>
+  <div class="category">
+    <div class="date-time">
+      <%= trade.created_at.strftime('%Y-%m-%d') %>
+    </div>
+    <div class="category-name">
+        <p><%= trade.name%></p>
+    </div>
+    <div class="spend-on">
+        <span>$ <%= trade.amount%></span>
+    </div>
+    <div class="delete-category">
+        <%= button_to 'Delete' , user_group_trade_path(@user, @group, trade), method: :delete %>
+    </div>
+  </div>
+  <%end%>
+
+    </div>
+
+     <div class="add-new">
+        <%= link_to 'Add new', new_user_group_trade_path(@user, @group), class: "new"%>
+    </div>
+</main>
