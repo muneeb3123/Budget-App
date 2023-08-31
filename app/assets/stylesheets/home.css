@@ -1,9 +1,5 @@
 /* Home page */
 
-body {
-  background-color: #007bff;
-}
-
 .home-page {
   display: flex;
   flex-direction: column;
@@ -15,7 +11,6 @@ body {
 
 .project-name h1 {
   font-size: 3.5rem;
-  color: #fff;
   font-weight: bold;
 }
 
@@ -37,9 +32,10 @@ body {
 }
 
 .login {
-  background-color: #ff4081;
+  background-color: #3778c2;
 }
 
-.signup {
-  background-color: #ff9800;
+.login-setup .signup {
+  color: black;
+  background-color: #fff;
 }
