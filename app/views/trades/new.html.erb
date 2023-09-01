@@ -1,0 +1,24 @@
+<%= stylesheet_link_tag 'form' %>
+
+<div class="heading">
+  <div class="left-link">
+    <%= link_to raw('<i class="fas fa-arrow-left"></i>'), user_group_path(current_user, @group), class: "back-icon" %>
+  </div>
+  <h1 class="center-heading">Create Transaction</h1>
+</div>
+
+<div class="forms">
+  <%= form_for @trade, url: user_group_trades_path(current_user, @group) do |f| %>
+
+    <div class="field">
+      <%= f.text_field :name, placeholder: "Enter transaction name" %>
+    </div>
+    <div class="field">
+      <%= f.number_field :amount, placeholder: "Enter transaction amount" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit 'Create' %>
+    </div>
+  <% end %>
+</div>
