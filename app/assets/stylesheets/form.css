@@ -1,7 +1,3 @@
-body {
-  background-color: #ced4d2;
-}
-
 .forms {
   display: flex;
   flex-direction: column;
@@ -11,7 +7,13 @@ body {
 
 form input:not([type="submit"]) {
   width: 100vw;
-  padding: 20px;
+  padding: 20px 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+form input[type="password"] {
+  font-size: 2rem;
 }
 
 form input[type="submit"] {
@@ -25,7 +27,8 @@ form input[type="submit"] {
 }
 
 form input::placeholder {
-  padding-left: 20px;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 .links {

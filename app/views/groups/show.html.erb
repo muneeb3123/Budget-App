@@ -9,11 +9,11 @@
 
 <div class="category-name-icon">
     <p><%= @group.name%></p>
-    <%= image_tag @group.icon, class: "image-logo"%>
+    <%= image_tag @group.icon, class: "image-logo-show"%>
 </div>
     <div class="total">
-        <span class="total-amount">$ <%= @amount%></span>
-    </div>
+    <span class="total-amount">$ <%= number_with_precision(@amount, precision: 2) %></span>
+</div>
     <div class="categories">
       <% @group.trades.order(created_at: :desc).each do |trade| %>
   <div class="category">

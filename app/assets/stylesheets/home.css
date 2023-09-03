@@ -3,21 +3,29 @@
 .home-page {
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 10rem;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 }
 
-.project-name h1 {
-  font-size: 3.5rem;
-  font-weight: bold;
+.project-name {
+  background-color: #5271C1;
+  padding: 30px;
+  border-radius: 20px;
 }
+
+.project-name h1 {
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: 400;
+}
+
 
 .login-setup {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 10px;
 }
 
 .login-setup > a {
@@ -27,8 +35,8 @@
   border-radius: 10px;
   display: flex;
   justify-content: center;
-  font-size: 1.5rem;
-  font-weight: bolder;
+  font-size: 1.2rem;
+  font-weight: 400;
 }
 
 .login {
