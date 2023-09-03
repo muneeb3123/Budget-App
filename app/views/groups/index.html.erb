@@ -7,7 +7,7 @@
   <h1 class="center-heading">Budget App</h1>
 </div>
     <div class="total">
-        <span class="total-amount">$ <%= @total_amount %></span>
+        <span class="total-amount">$ <%= number_with_precision( @total_amount, precision: 2) %></span>
     </div>
     <div class="categories">
         <% @groups.each do |group| %>
