@@ -15,7 +15,6 @@
         <p>There are no categories yet</p>
       </div>
     <% else %>
-      <div>
         <% @groups.each do |group| %>
           <div class="category">
             <div class="logo">
@@ -27,12 +26,11 @@
             <div class="spend-on">
               <span>$ <%= group.trades.sum(:amount) %></span>
             </div>
-            <div class="delete-category">
+            < class="delete-category">
               <%= button_to 'Delete', user_group_path(@user, group), method: :delete %>
             </div>
           </div>
         <% end %>
-      </div>
     <% end %>
   </div>
   <div class="add-new">
