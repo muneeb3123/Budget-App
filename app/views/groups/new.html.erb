@@ -10,6 +10,7 @@
 <div class="forms">
 
 <%= form_for @group, url: user_groups_path(current_user) do |f| %>
+ <%= image_tag "money.png", class: "money-logo"%>
 <div class="field">
     <%= f.text_field :name, placeholder: "Enter category name"%>
 </div>

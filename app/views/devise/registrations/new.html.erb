@@ -7,8 +7,8 @@
   <h1 class="center-heading">Signup</h1>
 </div>
 <div class="forms">
-
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<%= image_tag "money.png", class: "money-logo"%>
   <%= render "devise/shared/error_messages", resource: resource %>
 
 <div class="field">
@@ -16,7 +16,7 @@
   </div>
 
   <div class="field">
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Enter email address" %>
+    <%= f.email_field :email, autocomplete: "email", placeholder: "Enter email address" %>
   </div>
 
   <div class="field">

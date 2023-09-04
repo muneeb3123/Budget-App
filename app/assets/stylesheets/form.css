@@ -1,26 +1,28 @@
-.forms {
+form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 10px;
+}
+
+.forms {
+  display: grid;
+  place-items: center;
 }
 
 form input:not([type="submit"]) {
-  width: 100vw;
-  padding: 20px 0.5rem;
+  width: 90vw;
+  padding: 10px 0.5rem;
   font-size: 1.2rem;
   font-weight: 400;
-}
-
-form input[type="password"] {
-  font-size: 2rem;
 }
 
 form input[type="submit"] {
   padding: 10px;
   color: #fff;
   border: none;
-  width: 100vw;
+  width: 90vw;
   background-color: #3778c2;
   font-size: 1.5rem;
   font-weight: 900;

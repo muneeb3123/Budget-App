@@ -76,11 +76,13 @@ a {
   color: #721c24;
 }
 
-.close-flash-button {
-  position: absolute;
-  top: 5px;
-  right: 10px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
+.money-logo-white {
+  height: 70px;
+  margin-left: 30%;
+  filter: grayscale(100%) brightness(1000%) contrast(100%);
+  }
+
+  .money-logo {
+    height: 70px;
+    margin: 5rem 0 2rem 0;
+    }

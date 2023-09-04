@@ -1,5 +1,8 @@
 /* Home page */
 
+  @import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+
+
 .home-page {
   display: flex;
   flex-direction: column;
@@ -13,10 +16,96 @@
   background-color: #5271C1;
   padding: 30px;
   border-radius: 20px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+ position: relative;
+ overflow: hidden;
+}
+
+.border-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 3px;
+  Background: linear-gradient(to right, #5271C1, #FCC23F);
+  animation: animate-border-top 2s linear infinite;
+}
+
+.border-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 3px;
+  background: linear-gradient(to bottom, #5271C1, #FCC23F);
+  animation: animate-border-right 2s linear infinite;
+  animation-delay: 1s;
+}
+
+.border-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 3px;
+  background: linear-gradient(to top,  #5271C1, #FCC23F);
+  animation: animate-border-left 2s linear infinite;
+  animation-delay: 1s;
+}
+
+.border-bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to left,  #5271C1, #FCC23F);
+  animation: animate-border-bottom 2s linear infinite;
+}
+
+@keyframes animate-border-top {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes animate-border-right {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes animate-border-bottom {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes animate-border-left {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
 }
 
 .project-name h1 {
-  font-size: 2.5rem;
+  font-family: 'Rye', cursive;
+  font-size: 2rem;
   color: #fff;
   font-weight: 400;
 }

@@ -8,6 +8,7 @@
 
 <div class="forms">
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<%= image_tag "money.png", class: "money-logo"%>
   <div class="field">
     <%= f.email_field :email, autocomplete: "email", placeholder: "Email or Username" %>
   </div>
