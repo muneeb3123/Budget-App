@@ -2,6 +2,9 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
 
+  body {
+    background-color: #d9dff7;
+  }
 
 .home-page {
   display: flex;
