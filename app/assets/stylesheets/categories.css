@@ -11,6 +11,16 @@
   font-weight: 600;
 }
 
+.no-group {
+  display: flex;
+  justify-content: center;
+}
+
+.no-group p {
+  font-size: 2rem;
+  color: red;
+}
+
 .add-new {
   position: fixed;
   bottom: 0;

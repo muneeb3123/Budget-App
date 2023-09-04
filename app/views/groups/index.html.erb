@@ -1,35 +1,41 @@
- <%= stylesheet_link_tag 'categories' %>
- <main>
- <div class="heading">
-  <div class="left-link">
-    <%= button_to raw('<i class="fas fa-sign-out-alt"></i>'), destroy_user_session_path, method: :delete, class: 'logout-button', form_class: 'logout-form' %>
-  </div>
-  <h1 class="center-heading">Budget App</h1>
-</div>
-    <div class="total">
-        <span class="total-amount">$ <%= number_with_precision( @total_amount, precision: 2) %></span>
+<%= stylesheet_link_tag 'categories' %>
+<main>
+  <div class="heading">
+    <div class="left-link">
+      <%= button_to raw('<i class="fas fa-sign-out-alt"></i>'), destroy_user_session_path, method: :delete, class: 'logout-button', form_class: 'logout-form' %>
     </div>
-    <div class="categories">
+    <h1 class="center-heading">Budget App</h1>
+  </div>
+  <div class="total">
+    <span class="total-amount">$ <%= number_with_precision(@total_amount, precision: 2) %></span>
+  </div>
+  <div class="categories">
+    <% if @groups.empty? %>
+      <div class="no-group">
+        <p>There are no categories yet</p>
+      </div>
+    <% else %>
+      <div>
         <% @groups.each do |group| %>
-  <div class="category">
-    <div class="logo">
-      <%= image_tag group.icon, class: "image-logo" %>
-    </div>
-    <div class="category-name">
-        <p><%= link_to group.name, user_group_path(@user, group) %></p>
-    </div>
-    <div class="spend-on">
-  <span>$ <%= group.trades.sum(:amount)%></span>
-</div>
-    <div class="delete-category">
-        <%= button_to 'Delete' , user_group_path(@user, group), method: :delete %>
-    </div>
+          <div class="category">
+            <div class="logo">
+              <img src="<%= group.icon%>" alt="logo" class="image-logo">
+            </div>
+            <div class="category-name">
+              <p><%= link_to group.name, user_group_path(@user, group) %></p>
+            </div>
+            <div class="spend-on">
+              <span>$ <%= group.trades.sum(:amount) %></span>
+            </div>
+            <div class="delete-category">
+              <%= button_to 'Delete', user_group_path(@user, group), method: :delete %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
   </div>
-<% end %>
-
-    </div>
-
-    <div class="add-new">
-        <%= link_to 'Add new', new_user_group_path(@user), class: "new"%>
-    </div>
-    </main>
+  <div class="add-new">
+    <%= link_to 'Add new', new_user_group_path(@user), class: "new" %>
+  </div>
+</main>
